@@ -116,24 +116,78 @@ using System.Globalization;
 
 // Exceções e Coleções com C#
 
-try 
-{
-    string[] linhas = File.ReadAllLines("Arquivos/pasta1/arquivo_leitura.txt");
+// try 
+// {
+//     string[] linhas = File.ReadAllLines("Arquivos/pasta1/arquivo_leitura.txt");
 
-    foreach (string linha in linhas)
-    {
-        Console.WriteLine(linha);
-    }
-} 
-catch (FileNotFoundException ex)
-{
-    Console.WriteLine($"Arquivo de leitura não encontrado! {ex.Message}");
-}
-catch (DirectoryNotFoundException ex)
-{
-    Console.WriteLine($"Pasta do Arquivo de leitura não encontrado! {ex.Message}");
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Ocorreu uma exceção genérica! {ex.Message}");
-}
+//     foreach (string linha in linhas)
+//     {
+//         Console.WriteLine(linha);
+//     }
+// } 
+// catch (FileNotFoundException ex)
+// {
+//     Console.WriteLine($"Arquivo de leitura não encontrado! {ex.Message}");
+// }
+// catch (DirectoryNotFoundException ex)
+// {
+//     Console.WriteLine($"Pasta do Arquivo de leitura não encontrado! {ex.Message}");
+// }
+// catch (Exception ex)
+// {
+//     Console.WriteLine($"Ocorreu uma exceção genérica! {ex.Message}");
+// }
+
+// Tuplas
+// (int, string, string, decimal) tupla = (1, "Marco", "Molinaro", 10.05M);
+
+// Console.WriteLine($"Id: {tupla.Item1}, Nome: {tupla.Item2}, Sobrenome: {tupla.Item3}, Valor: {tupla.Item4}");
+
+// ValueTuple<int, string, string, decimal> outraFormaTupla = (1, "Marco", "Molinaro", 10.05M);
+
+// Console.WriteLine($"Id: {outraFormaTupla.Item1}");
+// Console.WriteLine($"Nome: {outraFormaTupla.Item2}");
+// Console.WriteLine($"Sobrenome: {outraFormaTupla.Item3}");
+// Console.WriteLine($"Valor: {outraFormaTupla.Item4}");
+
+// var outraFormaTupla2 = Tuple.Create(1, "Marco", "Molinaro", 10.05M);
+
+// Console.WriteLine($"Id: {outraFormaTupla2.Item1}");
+// Console.WriteLine($"Nome: {outraFormaTupla2.Item2}");
+// Console.WriteLine($"Sobrenome: {outraFormaTupla2.Item3}");
+// Console.WriteLine($"Valor: {outraFormaTupla2.Item4}");
+
+// LeituraArquivo arquivo = new LeituraArquivo();
+
+// //var (sucesso, linhasArquivo, quantidadeLinhas) = arquivo.LerArquivo("Arquivos/arquivoleitura.txt");
+// // Exemplo de descarte
+// var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("Arquivos/arquivoleitura.txt");
+
+// if (sucesso)
+// {
+//     //Console.WriteLine($"Quantidade Linhas lidas: {quantidadeLinhas}");
+
+//     foreach (string linha in linhasArquivo)
+//     {
+//         Console.WriteLine(linha);
+//     }
+// }
+// else
+// {
+//     Console.WriteLine("Não foi possível ler o arquivo");
+// }
+
+// Exemplo descostrutor
+// Pessoa p1 = new Pessoa("Marco", "Molinaro");
+
+// (string nome, string sobrenome) = p1;
+
+// Console.WriteLine($"{nome} {sobrenome}");
+
+// Exemplo if ternário
+int numero = 15;
+bool ehPar = false;
+
+ehPar = numero % 2 == 0;
+
+Console.WriteLine($"O número {numero} é " + (ehPar ? "par" : "impar"));
