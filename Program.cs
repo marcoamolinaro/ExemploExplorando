@@ -212,12 +212,93 @@ using Newtonsoft.Json;
 
 // File.WriteAllText("Arquivos/Vendas.json", serialiado);
 
-string conteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
+// string conteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
 
-List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+// List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
 
-foreach (Venda venda in listaVendas)
-{
-    Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}" +
-        $", Preço: {venda.Preco}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
-}
+// foreach (Venda venda in listaVendas)
+// {
+//     Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}" +
+//         $", Preço: {venda.Preco}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
+// }
+
+// Tipo Nulo
+// bool? desejaReceberEmail = null;
+
+// if (desejaReceberEmail.HasValue && desejaReceberEmail.Value) 
+// {
+//     Console.WriteLine("O usuário optou por receber e-mail.");
+// }
+// else 
+// {
+//     Console.WriteLine("O usuário não respondeu ou optou por não receber e-mail.");
+// }
+
+// string conteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
+
+// List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+// foreach (Venda venda in listaVendas)
+// {
+//     Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}" +
+//         $", Preço: {venda.Preco}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}" +
+//         $"{(venda.Desconto.HasValue ? $", Desconto de: {venda.Desconto}" : "")}");
+// }
+
+// Tipos anonimos
+// var tipoAnonimo = new {Nome = "Marco", Sobrenome = "Molinaro", Altura = 1.63};
+
+// Console.WriteLine($"Nome: {tipoAnonimo.Nome}");
+// Console.WriteLine($"Sobrenome: {tipoAnonimo.Sobrenome}");
+// Console.WriteLine($"Altura: {tipoAnonimo.Altura}");
+
+// string conteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
+
+// List<Venda> listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+// var listaAnonimo = listaVendas.Select(v => new {v.Produto, v.Preco});
+
+// foreach (var venda in listaAnonimo)
+// {
+//     Console.WriteLine($"Produto: {venda.Produto}, Preço: {venda.Preco}");
+// }
+
+// Tipos Dinâmicos
+
+// dynamic variavelDinamica = 4;
+
+// Console.WriteLine($"Tipo da variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica}");
+
+// variavelDinamica = "Texto";
+
+// Console.WriteLine($"Tipo da variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica}");
+
+// variavelDinamica = true;
+
+// Console.WriteLine($"Tipo da variável: {variavelDinamica.GetType()}, Valor: {variavelDinamica}");
+
+// Classe Genérica
+
+// MeuArray<int> arrayInteiro = new MeuArray<int>();
+
+// arrayInteiro.AdicionarElementoArray(30);
+
+// Console.WriteLine(arrayInteiro[0]);
+
+// MeuArray<string> arrayString = new MeuArray<string>();
+
+// arrayString.AdicionarElementoArray("Marco");
+
+// Console.WriteLine(arrayString[0]);
+
+
+// Métodos de extensão
+
+int numero = 15;
+bool par = false;
+
+par = numero.EhPar();
+
+string mensagem = "O número " + numero + " " + "é " + (par ? "par" : "impar");
+
+Console.WriteLine(mensagem);
