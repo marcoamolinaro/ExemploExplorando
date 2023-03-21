@@ -294,11 +294,29 @@ using Newtonsoft.Json;
 
 // Métodos de extensão
 
-int numero = 15;
-bool par = false;
+// int numero = 15;
+// bool par = false;
 
-par = numero.EhPar();
+// par = numero.EhPar();
 
-string mensagem = "O número " + numero + " " + "é " + (par ? "par" : "impar");
+// string mensagem = "O número " + numero + " " + "é " + (par ? "par" : "impar");
 
-Console.WriteLine(mensagem);
+// Console.WriteLine(mensagem);
+// 
+// Atribuindo tipo de referência
+
+Pessoa p1 = new Pessoa(nome: "Marco", sonbrenome: "Molinaro");
+
+Pessoa p2 = p1;
+p1.Nome = "Aurelio";
+
+Console.WriteLine($"Nome da pessoa p1: {p1.NomeCompleto}");
+Console.WriteLine($"Nome da pessoa p2: {p2.NomeCompleto}");
+
+int a = 10;
+int b = a;
+b = 60;
+
+Console.WriteLine($"Valor de A = {a}");
+Console.WriteLine($"Valor de B = {b}");
+
